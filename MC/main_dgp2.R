@@ -223,11 +223,11 @@ for(param_iter1 in 1:length(gamma_grid)){
     cvs_perc2 <- res[,(pp+1):(2*pp)]
     cvs_naive <- res[,(2*pp+1):(3*pp)]
     
-    cvs_perc2_l <- res[,(3*pp+1):(4*pp)]
-    cvs_naive_l <- res[,(4*pp+1):(5*pp)]
+    cvs_perc2_u <- res[,(3*pp+1):(4*pp)]
+    cvs_naive_u <- res[,(4*pp+1):(5*pp)]
     
-    cvs_perc2_u <- res[,(5*pp+1):(6*pp)]
-    cvs_naive_u <- res[,(6*pp+1):(7*pp)]
+    cvs_perc2_l <- res[,(5*pp+1):(6*pp)]
+    cvs_naive_l <- res[,(6*pp+1):(7*pp)]
     
     cvs_grid <- res[,7*pp+1]
     

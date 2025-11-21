@@ -228,20 +228,20 @@ for(param_iter1 in 1:length(gamma_grid)){
     filename <- paste("boot_n",n,"_g",gamma,"_p",delta1_grid[param_iter2],"2.Rdata",sep="")
     save.image(filename)
     
-    cat("===========================================================\n", file="temp_outputS1.txt", append=TRUE)
-    cat(paste(as.character(Sys.time()),"\n"), file="temp_outputS1.txt", append=TRUE)
-    cat(paste("filename: ", filename, "\n", sep="  "), file="temp_outputS1.txt", append=TRUE)
+    cat("===========================================================\n", file="text_output.txt", append=TRUE)
+    cat(paste(as.character(Sys.time()),"\n"), file="text_output.txt", append=TRUE)
+    cat(paste("filename: ", filename, "\n", sep="  "), file="text_output.txt", append=TRUE)
     cat(paste("sd  : ", round(sd(theta_hat[,1]),3), round(sd(theta_hat[,2]),3), round(sd(theta_hat[,3]),3), round(sd(theta_hat[,4]),3),
-              round(sd(theta_hat[,5]),3),round(sd(theta_hat[,6]),3), "\n", sep="  "), file="temp_outputS1.txt", append=TRUE)
-    cat(paste("RB2","\n", sep="  "), file="temp_outputS1.txt", append=TRUE)
-    cat(paste("cr95: ", cr95a_2[1], cr95a_2[2], cr95a_2[3], cr95a_2[4], cr95a_2[5], cr95a_2[6], "\n", sep="  "), file="temp_outputS1.txt", append=TRUE)
-    cat(paste("NP-B","\n", sep="  "), file="temp_outputS1.txt", append=TRUE)
-    cat(paste("cr95: ", cr95a_4[1], cr95a_4[2], cr95a_4[3], cr95a_4[4], cr95a_4[5], cr95a_4[6], "\n", sep="  "), file="temp_outputS1.txt", append=TRUE)
-    cat(paste("Asymptotic CI (Continuous)","\n", sep="  "), file="temp_outputS1.txt", append=TRUE)
-    cat(paste("cr95: ", acr95_1[1], acr95_1[2], acr95_1[3], acr95_1[4], acr95_1[5], acr95_1[6], "\n", sep="  "), file="temp_outputS1.txt", append=TRUE)
-    cat(paste("Asymptotic CI (Discontinuous)","\n", sep="  "), file="temp_outputS1.txt", append=TRUE)
-    cat(paste("cr95: ", acr95_2[1], acr95_2[2], acr95_2[3], acr95_2[4], acr95_2[5], acr95_2[6], "\n", sep="  "), file="temp_outputS1.txt", append=TRUE)
-    cat(paste("Elapsed time: ", round(difftime(t2,t1, units=c("mins")),5), "mins", "\n"), file="temp_outputS1.txt", append=TRUE)
+              round(sd(theta_hat[,5]),3),round(sd(theta_hat[,6]),3), "\n", sep="  "), file="text_output.txt", append=TRUE)
+    cat(paste("RB2","\n", sep="  "), file="text_output.txt", append=TRUE)
+    cat(paste("cr95: ", cr95a_2[1], cr95a_2[2], cr95a_2[3], cr95a_2[4], cr95a_2[5], cr95a_2[6], "\n", sep="  "), file="text_output.txt", append=TRUE)
+    cat(paste("NP-B","\n", sep="  "), file="text_output.txt", append=TRUE)
+    cat(paste("cr95: ", cr95a_4[1], cr95a_4[2], cr95a_4[3], cr95a_4[4], cr95a_4[5], cr95a_4[6], "\n", sep="  "), file="text_output.txt", append=TRUE)
+    cat(paste("Asymptotic CI (Continuous)","\n", sep="  "), file="text_output.txt", append=TRUE)
+    cat(paste("cr95: ", acr95_1[1], acr95_1[2], acr95_1[3], acr95_1[4], acr95_1[5], acr95_1[6], "\n", sep="  "), file="text_output.txt", append=TRUE)
+    cat(paste("Asymptotic CI (Discontinuous)","\n", sep="  "), file="text_output.txt", append=TRUE)
+    cat(paste("cr95: ", acr95_2[1], acr95_2[2], acr95_2[3], acr95_2[4], acr95_2[5], acr95_2[6], "\n", sep="  "), file="text_output.txt", append=TRUE)
+    cat(paste("Elapsed time: ", round(difftime(t2,t1, units=c("mins")),5), "mins", "\n"), file="text_output.txt", append=TRUE)
     }
   }
 }

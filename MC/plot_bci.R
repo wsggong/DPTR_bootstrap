@@ -36,8 +36,8 @@ dev.off()
 
 
 x0 <- theta_hat[,3]-delta[1]
-xu <- cvs_naive_l[,3]
-xl <- cvs_naive_u[,3]
+xu <- cvs_naive_u[,3]
+xl <- cvs_naive_l[,3]
 ix <- (x0<quantile(x0,.95))&(x0>quantile(x0,.05))
 
 
@@ -54,8 +54,8 @@ dev.off()
 
 
 
-xu <- cvs_perc2_l[,3]
-xl <- cvs_perc2_u[,3]
+xu <- cvs_perc2_u[,3]
+xl <- cvs_perc2_l[,3]
 
 
 pdf("plot_bci4.pdf")

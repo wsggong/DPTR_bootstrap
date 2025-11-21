@@ -1,0 +1,14 @@
+Descriptions of files
+
+ftn_est.R: functions for (sample) GMM estimation (unrestricted & continuity restricted)
+ftn_boot.R: functions for bootstrap and bootstrap estimation (unrestricted & continuity restricted)
+ftn_dgp1.R: functions for dgp in section 5, weakly exogenous threshold variable case.
+ftn_dgp2.R: functions for dgp in online Appendix C.3, weakly endogenous threshold variable case.
+
+main_dgp1.R: obtaining coverage rates in section 5. Implements bootstrap procedures: Grid-B, R-B, NP-B, R-B(S), and NP-B(S). (Tables 1, 3, 4, 5, 6). Coverage rates of asymptotic CIs in Appendix C.4 are also computed.
+main_dgp1_power.R: obtaining power by Grid-B and NP-B(S) for threshold location (Table 2 in section 5).
+main_dgp1_n10000.R: obtaining coverage rates for coefficients by R-B and NP-B when n=10000 (Table 1 in online Appendix C.1)
+main_dgp2.R: obtaining coverage rates in online Appendix C.3.
+
+table.Rnw: makes Tables 1-6 using the output files after running main_dgp1.R and main_dgp1_power.R.
+plot_bci.R: obtaining plots in online Appendix C.1. It uses the output file after running main_dgp1.R

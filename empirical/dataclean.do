@@ -1,6 +1,6 @@
 clear all
 
-import delimited "C:\Users\Woosik\Desktop\compustat\compustat.csv"
+import delimited "[Your directory]\filename.csv"
 // import delimited "" // Put your CSV file directory and name
 
 // 1. Data from 2010 to 2019
@@ -45,8 +45,6 @@ foreach i of local years{
 	replace oibdp = oibdp*cpi[1,`x']/100 if fyear==`i'
 	replace che = che*cpi[1,`x']/100 if fyear==`i'
 	replace capx = capx*cpi[1,`x']/100 if fyear==`i'
-	// replace xint = xint*cpi[1,`x']/100 if fyear==`i'
-	// replace txt = txt*cpi[1,`x']/100 if fyear==`i'
 	local x =`x'+1
 }
 
@@ -67,5 +65,4 @@ replace sale = log(sale/1000)
 keep gvkey fyear sale sg inv ta fsize tq lev cf ppe y roa liq
 tab fyear
 
-export excel using "C:\Users\Woosik\Desktop\compustat\data1.xls", firstrow(variables)
-//export excel using "", firstrow(variables)
+export excel using "[Your directory]\data1.xls", firstrow(variables)

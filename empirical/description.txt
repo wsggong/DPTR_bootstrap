@@ -1,0 +1,12 @@
+Descriptions of files
+
+
+ftn_est.R: functions for (sample) GMM estimation (unrestricted & continuity restricted)
+ftn_boot.R: functions for bootstrap and bootstrap estimation (unrestricted & continuity restricted)
+
+dataclean.do: creates precleaned dataset for empirical application using original compustat data. It creates data1.xls that is used by empirical.R and empirical_lintest.R.
+
+empirical.R: runs empirical applications for regression. It obtains the estimator and the 95% confidence intervals using the residual and grid bootstraps.
+empirical_lintest.R: runs the linearity test.
+
+table.R: creates Tables 7 and 8, and figures in Fig 1. It uses the output files of empirical.R and empirical_lintest.R
